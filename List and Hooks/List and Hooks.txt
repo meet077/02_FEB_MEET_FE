@@ -1,0 +1,64 @@
+Class Component Lifecycle
+Class components in React have a defined lifecycle with specific methods that can be overridden to run code at particular stages. The lifecycle methods are:
+
+(1) Mounting: When an instance of a component is being created and inserted into the DOM.
+
+    -- constructor(): Called before the component is mounted. Used for initializing state and binding methods.
+    -- static getDerivedStateFromProps(props, state): Called right before rendering. Used to update state based on props.
+    -- render(): Required method that returns the JSX to be rendered.
+    -- componentDidMount(): Called after the component is mounted. Used for side effects like fetching data.
+
+(2) Updating: When the component is being re-rendered due to changes in props or state.
+
+    -- static getDerivedStateFromProps(props, state): Called before rendering. Used to update state based on props.
+    --shouldComponentUpdate(nextProps, nextState): Used to let React know if the output of the component is not affected by the current change in state or props. Returns true or false.
+    --render(): Renders the component.
+    --getSnapshotBeforeUpdate(prevProps, prevState): Called right before the DOM is updated. Used to capture some information from the DOM before it changes.
+    --componentDidUpdate(prevProps, prevState, snapshot): Called after the DOM is updated. Used for side effects like network requests based on the previous state.
+
+(3) Unmounting: When a component is being removed from the DOM.
+
+    --componentWillUnmount(): Called right before the component is unmounted and destroyed. Used for cleanup like removing event listeners.
+    
+(4) Error Handling: When there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+
+    --componentDidCatch(error, info): Called after an error has been thrown by a descendant component. Used for error logging.
+    --Functional Component Lifecycle with Hooks
+    --Functional components use hooks to manage lifecycle events. The primary hooks for managing the lifecycle are:
+
+(1) Mounting and Updating:
+
+    --useEffect(callback, dependencies): Runs the callback after the component renders. The dependencies array determines when the effect should re-run. If empty, it runs once after initial render. This hook combines the functionality of componentDidMount, componentDidUpdate, and componentWillUnmount.
+
+(2) Unmounting:
+
+    --useEffect(callback, dependencies): The callback can return a cleanup function which runs during the unmounting phase or before the effect runs again if dependencies change. This is analogous to componentWillUnmount.
+
+
+-------------------EXAMPLE-----------------------
+
+import React, { useState, useEffect } from 'react';
+
+function ExampleComponent(props) {
+  const [state, setState] = useState(initialState);
+
+  useEffect(() => {
+    // This code runs after the component mounts and when props/state change.
+    // Similar to componentDidMount and componentDidUpdate
+
+    // Perform side effect like data fetching
+    console.log('Component did mount/update');
+
+    return () => {
+      // This code runs during unmounting.
+      // Similar to componentWillUnmount
+      console.log('Component will unmount');
+    };
+  }, [props, state]); // Dependencies array
+
+  return (
+    <div>
+      {/* Component JSX */}
+    </div>
+  );
+}
