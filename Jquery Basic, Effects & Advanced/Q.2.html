@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Examples</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+      #myElement {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Applying CSS using jQuery
+        $('#myElement').css({
+          color: 'blue',
+          'font-size': '20px',
+          'background-color': 'yellow',
+        });
+
+        // Adding a class
+        $('#myElement').addClass('highlight');
+
+        // Removing a class after a delay
+        setTimeout(function () {
+          $('#myElement').removeClass('highlight');
+        }, 2000);
+
+        // Basic animation using .animate()
+        $('#myElement').click(function () {
+          $(this).animate({
+            left: '250px',
+            opacity: '0.5',
+            height: '150px',
+            width: '150px',
+          });
+        });
+
+        // Fading elements using .fadeIn() and .fadeOut()
+        $('#fadeOutButton').click(function () {
+          $('#myElement').fadeOut();
+        });
+        $('#fadeInButton').click(function () {
+          $('#myElement').fadeIn();
+        });
+
+        // Sliding elements using .slideUp() and .slideDown()
+        $('#slideUpButton').click(function () {
+          $('#myElement').slideUp();
+        });
+        $('#slideDownButton').click(function () {
+          $('#myElement').slideDown();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="myElement">This text will be styled and animated.</div>
+    <button id="fadeOutButton">Fade Out</button>
+    <button id="fadeInButton">Fade In</button>
+    <button id="slideUpButton">Slide Up</button>
+    <button id="slideDownButton">Slide Down</button>
+  </body>
+</html>

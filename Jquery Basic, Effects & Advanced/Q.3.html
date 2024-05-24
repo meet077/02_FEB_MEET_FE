@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider</title>
+    <style>
+        .slider-container {
+            position: relative;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .slider {
+            position: relative;
+            width: 300%;
+            overflow: hidden;
+            white-space: nowrap;
+            transition: transform 0.5s ease; /* CSS transition for smooth animation */
+        }
+
+        .slider img {
+            width: 33.33%;
+            display: inline-block;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?cs=srgb&dl=pexels-pixabay-60597.jpg&fm=jpg" alt="Image 1">
+            <img src="https://images.alphacoders.com/700/700534.jpg" alt="Image 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR1upeAYytfjy54f_ZfJpAhpfrYbT8UJyyg4VQ_yma6Q1EfWkNRrq1tCQ43ZHPgBCeFGw&usqp=CAU" alt="Image 3">
+        </div>
+        <button class="prev">Previous</button>
+        <button class="next">Next</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var currentIndex = 0;
+            var totalSlides = $('.slider img').length;
+
+            function showSlide(index) {
+                var slideWidth = $('.slider').width() / 3;
+                var newPosition = -index * slideWidth;
+                $('.slider').css('transform', 'translateX(' + newPosition + 'px)');
+                currentIndex = index;
+            }
+
+            $('.next').click(function(){
+                var nextIndex = (currentIndex + 1) % totalSlides;
+                showSlide(nextIndex);
+            });
+
+            $('.prev').click(function(){
+                var prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                showSlide(prevIndex);
+            });
+        });
+    </script>
+</body>
+</html>
