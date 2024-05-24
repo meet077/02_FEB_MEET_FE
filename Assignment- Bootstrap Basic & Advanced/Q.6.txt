@@ -1,0 +1,17 @@
+What is a Button Group, and what is the class for a basic Button Group?
+
+A Button Group in Bootstrap is a group of buttons that are visually grouped together, typically sharing the same styling and alignment. They are often used to group related actions or options, providing a more organized and user-friendly interface.
+
+Basic Class for Button Group:
+
+In Bootstrap , the basic class for creating a button group is "btn-group". This class is applied to a container element (such as a <div>) that wraps the buttons within the group. Additionally, Bootstrap provides variations of button groups, such as vertical button groups and button toolbar, which can be achieved by combining the "btn-group" class with other classes like "btn-group-vertical" and "btn-toolbar".
+
+Example:
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-primary">Button 1</button>
+  <button type="button" class="btn btn-primary">Button 2</button>
+  <button type="button" class="btn btn-primary">Button 3</button>
+</div>
+
+This example creates a basic horizontal button group with three buttons, each styled with the "btn btn-primary" classes.

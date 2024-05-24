@@ -1,0 +1,64 @@
+What are the default Bootstrap text settings?
+
+
+1. Font Family:
+   - Bootstrap uses a default font family for the body text, headings, and other elements. The default font family is usually a system font stack that includes several fallback fonts to ensure compatibility across different operating systems and devices.
+
+2. Font Size:
+   - Bootstrap defines default font sizes for various elements, such as paragraphs, headings, and other text elements. These font sizes are typically defined using relative units like pixels (px) or rems (root ems) to facilitate responsive design.
+
+3. Line Height:
+   - Bootstrap sets a default line height for text elements to improve readability and aesthetics. The line height determines the vertical spacing between lines of text and is typically set as a multiple of the font size to ensure consistent spacing.
+
+4. Text Color:
+   - Bootstrap specifies default text colors for different states, including regular text, links, and headings. These colors are chosen to provide adequate contrast against the background and ensure readability.
+
+CSS Code for Default Bootstrap Text Settings:
+
+/* Default font family */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Default font sizes */
+p {
+    font-size: 1rem; /* 16px */
+}
+
+h1 {
+    font-size: 2.5rem; /* 40px */
+}
+
+h2 {
+    font-size: 2rem; /* 32px */
+}
+
+h3 {
+    font-size: 1.75rem; /* 28px */
+}
+
+h4 {
+    font-size: 1.5rem; /* 24px */
+}
+
+h5 {
+    font-size: 1.25rem; /* 20px */
+}
+
+h6 {
+    font-size: 1rem; /* 16px */
+}
+
+/* Default line height */
+body {
+    line-height: 1.5;
+}
+
+/* Default text color */
+body {
+    color: #212529; /* Bootstrap's default text color */
+}
+
+a {
+    color: #007bff; /* Bootstrap's default link color */
+}
