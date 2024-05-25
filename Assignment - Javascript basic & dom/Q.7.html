@@ -1,0 +1,9 @@
+<!-- Q.7 Check if typeof '10' is exactly equal to 10. If not make it exactly equal? -->
+<script>
+    let value = '10';
+        if (typeof value !== 'number') {
+            value = Number(value);
+        }
+        console.log(value); // 10
+        console.log(typeof value); // 'number'
+</script>

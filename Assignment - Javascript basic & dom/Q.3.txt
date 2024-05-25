@@ -1,0 +1,16 @@
+Q.3 Define a Data Types in JS?
+
+ JavaScript has several data types, which can be divided into two categories: primitive and non-primitive (or reference) types.
+
+Primitive types:
+
+- Number: Represents both integer and floating-point numbers (e.g., 42, 3.14).
+- String: Represents a sequence of characters (e.g., 'Hello', "World").
+- Boolean: Represents true or false values.
+- Null: Represents an intentional absence of any object value.
+- Undefined: Represents a variable that has been declared but not assigned a value.
+- Symbol: Represents a unique and immutable value, often used as object property keys.
+
+Non-primitive types:
+
+- Object: Represents a collection of properties, including arrays, functions, and other objects.

@@ -1,0 +1,4 @@
+Q.5 What the difference between undefined and undeclared in JavaScript?
+
+- Undefined: A variable is declared but not assigned a value. For example, let x; console.log(x); // Output: undefined
+- Undeclared: A variable is used without being declared. For example, console.log(y); // ReferenceError: y is not defined

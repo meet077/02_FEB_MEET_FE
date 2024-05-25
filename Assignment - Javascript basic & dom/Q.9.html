@@ -1,0 +1,16 @@
+<!-- Q.9 Write a JavaScript program to calculate days left until next Christmas? -->
+<script>
+
+    function daysUntilChristmas() {
+        const today = new Date();
+        const currentYear = today.getFullYear();
+        const nextChristmas = new Date(currentYear, 11, 25);
+        if (today > nextChristmas) {
+            nextChristmas.setFullYear(currentYear + 1);
+        }
+        const oneDay = 1000 * 60 * 60 * 24;
+        const daysLeft = Math.ceil((nextChristmas - today) / oneDay);
+        return daysLeft;
+    }
+    console.log(`Days until next Christmas: ${daysUntilChristmas()}`);
+</script>
