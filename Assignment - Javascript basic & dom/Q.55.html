@@ -1,0 +1,41 @@
+<!-- Q.55 Form in Email, number, Password, Validation? -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <script>
+        function validateForm() {
+  const email = document.forms["myForm"]["email"].value;
+  const number = document.forms["myForm"]["number"].value;
+  const password = document.forms["myForm"]["password"].value;
+
+  if (email == "" || number == "" || password == "") {
+    alert("All fields must be filled out");
+    return false;
+  }
+  if (!email.includes('@')) {
+    alert("Invalid email address");
+    return false;
+  }
+  if (isNaN(number) || number <= 0) {
+    alert("Invalid number");
+    return false;
+  }
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters long");
+    return false;
+  }
+}
+
+    </script>
+</head>
+<body>
+    <form name="myForm" onsubmit="return validateForm()">
+        Email: <input type="text" name="email">
+        Number: <input type="text" name="number">
+        Password: <input type="password" name="password">
+        <input type="submit" value="Submit">
+      </form>
+</body>
+</html>

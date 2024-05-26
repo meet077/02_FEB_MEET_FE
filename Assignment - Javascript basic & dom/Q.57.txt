@@ -1,0 +1,16 @@
+Q.57 how many type of JS Event? How to use it?
+
+There are many types of JavaScript events, including:
+
+1. Mouse events (e.g., click, dblclick, mouseover)
+2. Keyboard events (e.g., keydown, keyup)
+3. Form events (e.g., submit, change, focus)
+4. Document and window events (e.g., load, resize, scroll)
+
+To use an event, you typically attach an event listener to an HTML element using JavaScript. For example:
+
+<script>
+    document.getElementById("myButton").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+</script>

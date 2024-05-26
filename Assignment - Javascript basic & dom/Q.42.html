@@ -1,0 +1,10 @@
+<!-- Q.42 Write a JavaScript program to compare two objects? -->
+<script>
+        function compareObjects(obj1, obj2) {
+            return JSON.stringify(obj1) === JSON.stringify(obj2);
+        }
+
+        let obj1 = {a: 1, b: 2};
+        let obj2 = {a: 1, b: 2};
+        console.log(compareObjects(obj1, obj2)); // Output: true
+</script>

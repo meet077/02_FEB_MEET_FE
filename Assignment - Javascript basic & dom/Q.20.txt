@@ -1,0 +1,6 @@
+Q.20 What is the difference between && and || in JavaScript?
+
+Ans. 
+- && (logical AND): Returns true if both operands are true, otherwise returns false. It stops evaluating as soon as it finds the first falsy value.
+
+- || (logical OR): Returns true if at least one operand is true, otherwise returns false. It stops evaluating as soon as it finds the first truthy value.

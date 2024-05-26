@@ -1,0 +1,3 @@
+Q.16 What is the result of the expression (true && 1 && "hello")?
+
+A. The result is "hello". In JavaScript, the && operator returns the last truthy value if all operands are truthy.

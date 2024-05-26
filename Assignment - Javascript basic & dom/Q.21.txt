@@ -1,0 +1,2 @@
+Q.21 What is the use of Void (0)?
+A. The void(0) operator evaluates an expression and returns undefined. It is often used in hyperlinks to prevent the page from reloading when the link is clicked.

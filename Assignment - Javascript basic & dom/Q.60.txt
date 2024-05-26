@@ -1,0 +1,5 @@
+Q.60 Array vs object differences in JS?
+
+A. Arrays and objects are fundamental data structures in JavaScript.
+   - Arrays: Ordered collections indexed by integers. Used for storing lists of data. Example: `[1, 2, 3]`. Arrays have methods like `push`, `pop`, `shift`, `map`, etc.
+   - Objects: Unordered collections of key-value pairs. Used for storing related data and functionalities. Example: `{ key: 'value' }`. Objects are accessed using keys and have methods like `hasOwnProperty`, `keys`, `values`, etc.

@@ -1,0 +1,6 @@
+Q.47 What is the drawback of declaring methods directly in JavaScript objects?
+
+Ans.
+The drawback is that each object created using that constructor will have its own copy of the method, 
+which can consume more memory especially if the method is large. It also affects performance as 
+the method is not shared among instances.

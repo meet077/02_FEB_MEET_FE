@@ -1,0 +1,5 @@
+Q.18 What is a Loop and Switch Case in JavaScript define that?
+
+- Loop: A loop is used to repeatedly execute a block of code as long as a specified condition is true. Common loops in JavaScript include for, while, and do...while loops.
+
+- Switch Case: A switch statement evaluates an expression and executes code blocks based on matching case labels. It is useful for handling multiple conditions that depend on the value of a single variable.

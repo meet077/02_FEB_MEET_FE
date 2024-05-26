@@ -1,0 +1,44 @@
+<!-- Q.56 Dynamic Form Validation in JS? -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+  const form = document.getElementById('myForm');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let valid = true;
+
+    const inputs = form.getElementsByTagName('input');
+    for (let input of inputs) {
+      if (input.value === '') {
+        alert(`${input.name} must be filled out`);
+        valid = false;
+        break;
+      }
+    }
+
+    if (valid) {
+      form.submit();
+    }
+  });
+});
+
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        Email: <input type="text" name="email">
+        Number: <input type="text" name="number">
+        Password: <input type="password" name="password">
+        <input type="submit" value="Submit">
+      </form>
+      
+</body>
+</html>

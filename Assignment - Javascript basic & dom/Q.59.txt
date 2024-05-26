@@ -1,0 +1,5 @@
+Q.59 What is Bom vs Dom in JS?
+
+A. The Browser Object Model (BOM) and Document Object Model (DOM) are two important concepts in JavaScript. 
+   - BOM: BOM provides interaction with the browser, enabling you to manipulate browser window properties and control navigation. Examples include `window`, `navigator`, `screen`, `location`, `history` objects.
+   - DOM: DOM allows interaction with the HTML document, enabling you to manipulate the structure, style, and content of a webpage. Examples include `document` object, and methods like `getElementById`, `querySelector`, etc.

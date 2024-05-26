@@ -1,0 +1,11 @@
+<!-- Q.40 Write a JavaScript Program to display the current day and time in the following format. -->
+<script>
+
+    let today = new Date();
+    let day = today.toLocaleDateString('en-US', { weekday: 'long' });
+    let hour = today.getHours();
+    let minute = today.getMinutes();
+    let meridiem = hour >= 12 ? 'PM' : 'AM';
+    hour = hour % 12 || 12;
+    console.log(`Today is ${day}. Current Time is ${hour}:${minute} ${meridiem}`);
+</script>

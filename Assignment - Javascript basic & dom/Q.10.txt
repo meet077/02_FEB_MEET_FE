@@ -1,0 +1,4 @@
+Q.10 What is Condition Statement?
+
+Ans.
+ A condition statement in JavaScript is used to perform different actions based on different conditions. The most common condition statements are if, else if, else, and switch. These statements allow the execution of certain code blocks if specific conditions are true.

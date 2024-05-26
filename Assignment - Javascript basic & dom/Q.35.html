@@ -1,0 +1,8 @@
+<!-- Q.35 Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS? -->
+<script>
+
+    function sumOfDigits(num) {
+        return num.toString().split('').reduce((sum, digit) => sum + parseInt(digit, 10), 0);
+    }
+    console.log(sumOfDigits(1523)); // Output: 11
+</script>

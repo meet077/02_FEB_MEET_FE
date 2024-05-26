@@ -1,0 +1,3 @@
+Q.17 What is the result of the expression true && false || false && true?
+
+A. The result is false. The && operator has higher precedence than ||.
