@@ -1,0 +1,7 @@
+(1) What is Redux?
+
+Redux is a predictable state container for JavaScript applications, commonly used with React. It helps manage the state of an application by providing a single source of truth (a store) and ensures that the state can only be changed by dispatching actions, which are then processed by reducers. Redux follows three main principles: a single source of truth, state is read-only, and changes are made with pure functions.
+
+
+
+

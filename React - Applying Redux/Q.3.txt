@@ -1,0 +1,6 @@
+(3) What is Pure Component? When to use Pure Component over Component?
+
+A.
+ Pure Component in React is a component that implements the `shouldComponentUpdate` lifecycle method with a shallow comparison of props and state. If neither the props nor the state have changed, the component will not re-render. This can improve performance by reducing unnecessary renders. You should use Pure Component when:
+- The component renders the same output given the same props and state.
+- The component's state and props are simple and do not contain complex nested structures.

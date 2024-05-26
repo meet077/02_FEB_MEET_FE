@@ -1,0 +1,7 @@
+(4) What is the second argument that can optionally be passed to setState and what is its purpose?
+
+The second argument that can be optionally passed to `setState` is a callback function. This callback is executed once the `setState` operation is complete and the component has been re-rendered. It is useful for performing actions that depend on the updated state or ensuring code runs only after the state has been updated. For example:
+```javascript
+this.setState({ count: this.state.count + 1 }, () => {
+  console.log('State has been updated:', this.state.count);
+});
